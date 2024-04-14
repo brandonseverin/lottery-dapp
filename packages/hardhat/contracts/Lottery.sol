@@ -44,7 +44,7 @@ contract Lottery is Ownable {
         uint256 _purchaseRatio,
         uint256 _betPrice,
         uint256 _betFee
-    ) Ownable(msg.sender) {
+    ) Ownable() {
         paymentToken = new LotteryToken(tokenName, tokenSymbol);
         purchaseRatio = _purchaseRatio;
         betPrice = _betPrice;
